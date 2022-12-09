@@ -41,6 +41,10 @@ body:
     validations:
       required: true
   - type: textarea
+    id: suggested-solution
+    attributes:
+      label: Do you have a suggested solution?
+  - type: textarea
     id: additional
     attributes:
       label: Anything else we need to know?
