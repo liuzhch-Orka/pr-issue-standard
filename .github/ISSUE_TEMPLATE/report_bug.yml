@@ -31,16 +31,16 @@ body:
     validations:
       required: true
   - type: textarea
-    id: additional
-    attributes:
-      label: Anything else we need to know?
-  - type: textarea
     id: branch
     attributes:
-      label: |
-        On which branch did you encounter this problem?
+      label: On which branch did you encounter this problem?
+      description:
         Use `git rev-parse --abbrev-ref HEAD` to get branch name and paste below.
       placeholder: |
         e.g. dev-remote_unboxing
     validations:
       required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Anything else we need to know?
