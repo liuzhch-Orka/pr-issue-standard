@@ -1,0 +1,60 @@
+name: Require a new feature
+description: Add a new feature in Fitting Console backend.
+title: "[Feat]: "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this new feature report!
+        You can describe your requirement below.
+  - type: textarea
+    id: what-needed
+    attributes:
+      label: What's needed?
+      description: What new feature do you want?
+      placeholder: Tell us what you want!
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What's your expected behavior?
+      description: |
+        Describe your expected input(request) and output(response) below.
+      placeholder: |
+        e.g.
+        **request:**
+        `GET /audiologists/aud_joey@hiorka.com/availabletime/?duration=60`
+        **reponse:**
+        Get a list of available time slots of audiologist with email aud_joey@hiorka.com, each of which lasts for `duration` minutes.
+    validations:
+      required: true
+  - type: dropdown
+    id: expected-due
+    attributes:
+      label: How urgent is this feature?
+      description: You should be aware that our development progress is not EXACTLY as you expected.
+      options:
+        - none - never mind, just an idea
+        - scheduled - two week or longer
+        - hurry - one week
+        - emergency - 48hours(almost never happens)
+    validations:
+      required: true
+  - type: dropdown
+    id: who-required
+    attributes:
+      label: Where does this new need come from?
+      options:
+        - Flutter App
+        - Orka Website
+        - Fitting Console
+        - Data
+        - Service
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Anything else we need to know?
