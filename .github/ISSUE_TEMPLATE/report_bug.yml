@@ -1,5 +1,5 @@
 name: Bug Report
-description: Creat a bug report in fitting console backend.
+description: Creat a bug report in Fitting Console backend.
 title: "[Bug]: "
 labels: ["bug"]
 body:
@@ -40,10 +40,22 @@ body:
         e.g. dev-remote_unboxing
     validations:
       required: true
+  - type: dropdown
+    id: expected-fixed
+    attributes:
+      label: How urgent is it to fix this bug?
+      description: You should be aware that our bug-fix progress is not EXACTLY as you expected, but we will try our best.
+      options:
+        - none - an potential/unimportant bug
+        - scheduled - two weeks or longer
+        - hurry - one week
+        - emergency - 48hours
+    validations:
+      required: true
   - type: textarea
     id: suggested-solution
     attributes:
-      label: Do you have a suggested solution?
+      label: Do you have any suggested solution?
   - type: textarea
     id: additional
     attributes:
